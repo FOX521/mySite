@@ -43,12 +43,15 @@ img {
 .header__nav::before {
     content: '';
     display: inline-block;
+    position: absolute;
+    top: 34px;
+    right: 30px;
     z-index: 2;
-    width: 20px;
-    height: 20px;
-    background-color: var(--color-bg-grey);
+    width: 22px;
+    height: 22px;
     background-image: url("../img/menu-close.svg");
-    background-size: auto;
+    background-size: 22px;
+    cursor: pointer;
 }
 
 .header__photo-demonstration {
@@ -130,8 +133,18 @@ img {
     padding: 0;
 }
 
+.skills__img {
+    width: 87px;
+    height: 89px;
+}
+
+.skills__img-figma {
+    width: 60px;
+}
+
 .portfolio {
     padding-top: 81px;
+    padding-bottom: 20px;
     text-align: center;
     background-color: var(--color-bg-grey);
 }
@@ -146,7 +159,40 @@ img {
 
 .portfolio__list {
     margin: 0;
+    padding: 0;
     list-style: none;    
+}
+
+.portfolio__img {
+    width: 316px;
+    height: 171px;
+    border: none;
+    margin-top: 33px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.portfolio__describe {
+    font-family: var(--font-family-little);
+    cursor: pointer;
+}
+
+.portfolio__img-glacy {
+    background-image: url('../img/Glacy-main.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.portfolio__img-keksobooking {
+    background-image: url('../img/Keksobukig-main.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.portfolio__img-cat-energy {
+    background-image: url('../img/market-cat.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .contacts {
@@ -181,11 +227,18 @@ img {
     line-height: 22px;
     font-family: var(--font-family-little);
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .contacts__list-social {
     list-style: none;
     margin-bottom: 50px;
+}
+
+.contacts__img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .contacts__describe-link {
