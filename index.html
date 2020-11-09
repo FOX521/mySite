@@ -6,20 +6,20 @@
     <meta name="discription" content="Site with my portfolio">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fira+Mono&family=Fjalla+One&family=Roboto+Mono&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="./css/style.css"> 
     <title>Визитка</title>
 </head>
 <body class="body">
     <main class="main">
         <header class="header">
             <nav class="header__nav nav">
-                <button class="header__nav-close-button"></button>
+                <button class="header__nav-close-button visually-hidden"></button>
                 <ul class="nav-list">
-                    <li class="nav-list__element-first">Home</li>
-                    <li class="nav-list__element-second">About me</li>
-                    <li class="nav-list__element-third">Skills</li>
-                    <li class="nav-list__element-first">Portfolio</li>
-                    <li class="nav-list__element-first">Contacts</li>    
+                    <li class="nav-list__element-first"><a href="#">Home</a></li>
+                    <li class="nav-list__element-second"><a href="#">About me</a></li>
+                    <li class="nav-list__element-third"><a href="#">Skills</a></li>
+                    <li class="nav-list__element-first"><a href="#">Portfolio</a></li>
+                    <li class="nav-list__element-first"><a href="#">Contacts</a></li>    
                 </ul>
                 <a class="nav__language" href="#"><span class="nav__language-ru">RU</span>|<span class="nav__language-eng">ENG</span></a>
             </nav>
@@ -27,7 +27,7 @@
             <p class="header__about-me">Front-end developer,
                 25 years old , Moscow
             </p>
-            <img class="header__photo-demonstration" src="#" alt="demonstration photo">
+            <img class="header__photo-demonstration" src="./img/my-mobile.webp" alt="demonstration photo">
         </header>
         <section class="about-me">
             <h2 class="about-me__title">About me</h2>
@@ -45,21 +45,45 @@
             <p class="skills__advantages">I work in such programs as</p>
             <ul class="skills__list">
                 <li class="skills__element-first">
-                    <img class="skills__img" src="#">
+                    <img class="skills__img" src="./img/Figmaicon.svg">
                     <p class="skills__describe">
-
+                        Figma
                     </p>
                 </li>
                 <li class="skills__element-second">
-                    <img class="skills__img" src="#">
+                    <img class="skills__img" src="./img/GULPicon.jpg">
                     <p class="skills__describe">
-
+                        Gulp
+                    </p>
+                </li>
+                <li class="skills__element-second">
+                    <img class="skills__img" src="./img/HTMLicon.webp">
+                    <p class="skills__describe">
+                        HTML5
+                    </p>
+                </li>
+                <li class="skills__element-second">
+                    <img class="skills__img" src="./img/sass.webp">
+                    <p class="skills__describe">
+                        SASS
                     </p>
                 </li>
                 <li class="skills__element-third">
-                    <img class="skills__img" src="#">
+                    <img class="skills__img" src="./img/sql.webp">
                     <p class="skills__describe">
-
+                        SQL
+                    </p>
+                </li>
+                <li class="skills__element-third">
+                    <img class="skills__img" src="./img/JSicon.webp">
+                    <p class="skills__describe">
+                        JavaScript
+                    </p>
+                </li>
+                <li class="skills__element-third">
+                    <img class="skills__img" src="./img/CSS3icon.svg">
+                    <p class="skills__describe">
+                        CSS3
                     </p>
                 </li>
             </ul>
@@ -91,19 +115,24 @@
             </p>
             <button class="contacts__button">Send message</button>
             <ul class="contacts__list-social">
-                <li class="contacts__list-social-first-element">
+                <li class="contacts__list-social-telegram">
                     <a class="contacts__link">
-                        <img class="contacts__img" src="#">
+                        <img class="contacts__img" src="./img/telegram.svg">
                     </a>
                 </li>
-                <li class="contacts__list-social-second-element">
+                <li class="contacts__list-social-whatsapp">
                     <a class="contacts__link">
-                        <img class="contacts__img" src="#">
+                        <img class="contacts__img" src="./img/wahsapp-icon.svg">
                     </a>
                 </li>
-                <li class="contacts__list-social-third-element">
+                <li class="contacts__list-social-github">
                     <a class="contacts__link">
-                        <img class="contacts__img" src="#">
+                        <img class="contacts__img" src="./img/github.svg">
+                    </a>
+                </li>
+                <li class="contacts__list-social-mail">
+                    <a class="contacts__link">
+                        <img class="contacts__img" src="./img/mail-icon.svg">
                     </a>
                 </li>
             </ul>

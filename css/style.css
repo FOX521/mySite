@@ -1,0 +1,199 @@
+:root {
+    --color-bg-white: #ffffff;
+    --color-bg-grey: #F6F6F6;
+    --color-dark-grey:  #828282;
+    --color-main-black : #000000;
+    --font-family-main: 'Fjalla One', 'Abril Fatface' ,sans-serif;
+    --font-family-little: Roboto, 'Fjalla One';
+}
+
+img {
+	max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.header {
+    background-color: var(--color-bg-white);
+    font-family: var(--font-family-main)
+}
+
+.header__title {
+    font-size: 47px;
+    line-height: 58px;
+    width: 124px;
+    height: 106px;
+}
+
+.header__nav::before {
+    content: '';
+    display: inline-block;
+    z-index: 2;
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-bg-grey);
+    background-image: url("../img/menu-close.svg");
+    background-size: auto;
+}
+
+.header__photo-demonstration {
+    margin-bottom: 83px;
+}
+
+
+.header__about-me {
+    margin: 0;
+    margin-bottom: 36px;
+    font-family: var(--font-family-little);
+    width: 205px;
+    height: 44px;
+}
+
+.nav-list {
+    list-style: none;
+    font-size: 25px;
+    line-height: 42px;
+    color: var(--color-dark-grey);
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--color-dark-grey);
+}
+
+.nav__language {
+    text-decoration: none;
+    color: var(--color-main-black);
+}
+
+.about-me {
+    padding-top: 81px;
+    padding-bottom: 29px;
+    background-color: var(--color-bg-grey);
+    color: var(--color-main-black);
+    font-family: var(--font-family-little);
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.about-me .about-me__title {
+    margin-bottom: 29px;
+    font-size: 34px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.about-me__describe-first,
+.about-me__describe-second {
+    padding-bottom: 29px;
+}
+
+.skills {
+    padding-top: 83px;
+    background-color: var(--color-bg-white);
+    text-align: center;
+}
+
+.skills__title {
+    color: var(--color-main-black);
+    font-family: var(--font-family-main);
+    font-size: 34px;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skills__advantages {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: var(--font-family-little);
+}
+
+.skills__list {
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio {
+    padding-top: 81px;
+    text-align: center;
+    background-color: var(--color-bg-grey);
+}
+
+.portfolio__title {
+    font-size: 34px;
+    line-height: 42px;
+    color: var(--color-main-black);
+    margin-bottom: 65px;
+    font-family: var(--font-family-main);
+}
+
+.portfolio__list {
+    margin: 0;
+    list-style: none;    
+}
+
+.contacts {
+    text-align: center;
+    padding-top: 82px;
+    margin-top: -16px;
+}
+
+.contacts__title {
+    font-size: 34px;
+    line-height: 42px;
+    font-family: var(--font-family-main);
+    margin-bottom: 27px;
+}
+
+.contacts__welcome {
+    font-size: 18px;
+    line-height: 22px;
+    width: 255px;
+    height: 44px;
+    margin: auto;
+    margin-bottom: 39px;
+}
+
+.contacts__button {
+    width: 316px;
+    height: 42px;
+    background-color: var(--color-main-black);
+    color: var(--color-bg-white);
+    border-radius: 50px;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: var(--font-family-little);
+    margin-bottom: 50px;
+}
+
+.contacts__list-social {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.contacts__describe-link {
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--color-dark-grey);
+}
+
+.contacts__describe-link-soc {
+    margin: 0;
+}
