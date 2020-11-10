@@ -230,6 +230,11 @@ img {
     cursor: pointer;
 }
 
+.contacts__button a {
+    text-decoration: none;
+    color: var(--color-bg-white);
+}
+
 .contacts__list-social {
     list-style: none;
     margin-bottom: 50px;
