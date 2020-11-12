@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="discription" content="Site with my portfolio">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Fira+Mono&family=Fjalla+One&family=Roboto+Mono&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css"> 
+    <title>Визитка</title>
+</head>
+<body class="body">
+    <main class="main">
+        <header class="header">
+            <nav class="header__nav nav">
+                <button class="header__nav-close-button visually-hidden"></button>
+                <ul class="nav-list">
+                    <li class="nav-list__element-first"><a href="#">Home</a></li>
+                    <li class="nav-list__element-second"><a href="#">About me</a></li>
+                    <li class="nav-list__element-third"><a href="#">Skills</a></li>
+                    <li class="nav-list__element-first"><a href="#">Portfolio</a></li>
+                    <li class="nav-list__element-first"><a href="#">Contacts</a></li>    
+                </ul>
+                <a class="nav__language" href="#"><span class="nav__language-ru">RU</span>|<span class="nav__language-eng">ENG</span></a>
+            </nav>
+            <h1 class="header__title">Usenko Vadim</h1>
+            <p class="header__about-me">Front-end developer,
+                25 years old , Moscow
+            </p>
+            <img class="header__photo-demonstration" src="./img/my-mobile.webp" alt="demonstration photo">
+        </header>
+        <section class="about-me">
+            <h2 class="about-me__title">About me</h2>
+            <p class="about-me__describe-first">
+                Hi, I'm Vadim – Front-end developer from Moscow. 
+                I'm interested in WEB and everything connected with it.</p>
+            <p class="about-me__describe-second">   I'm studying at courses 
+                "Web and React developer" in IT-Academy.</p>
+            <p class="about-me__describe-third">
+                Ready to implement excellent projects with wonderful people.
+            </p>
+        </section>
+        <section class="skills">
+            <h2 class="skills__title">Skills</h2>
+            <p class="skills__advantages">I work in such programs as</p>
+            <ul class="skills__list">
+                <li class="skills__element-first">
+                    <img class="skills__img-figma" src="./img/Figmaicon.svg">
+                    <p class="skills__describe">
+                        Figma
+                    </p>
+                </li>
+                <li class="skills__element-second">
+                    <img class="skills__img" src="./img/GULPicon.jpg">
+                    <p class="skills__describe">
+                        Gulp
+                    </p>
+                </li>
+                <li class="skills__element-second">
+                    <img class="skills__img" src="./img/HTMLicon.webp">
+                    <p class="skills__describe">
+                        HTML5
+                    </p>
+                </li>
+                <li class="skills__element-second">
+                    <img class="skills__img" src="./img/sass.webp">
+                    <p class="skills__describe">
+                        SASS
+                    </p>
+                </li>
+                <li class="skills__element-third">
+                    <img class="skills__img" src="./img/sql.svg">
+                    <p class="skills__describe">
+                        SQL
+                    </p>
+                </li>
+                <li class="skills__element-third">
+                    <img class="skills__img" src="./img/JSicon.webp">
+                    <p class="skills__describe">
+                        JavaScript
+                    </p>
+                </li>
+                <li class="skills__element-third">
+                    <img class="skills__img" src="./img/CSS3icon.svg">
+                    <p class="skills__describe">
+                        CSS3
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <section class="portfolio">
+            <h2 class="portfolio__title">Portfolio</h2>
+            <ul class="portfolio__list">
+                <li class="portfolio__first-element">
+                    <img class="portfolio__img portfolio__img-glacy">
+                    <p class="portfolio__describe">
+                        Glacy - market ice cream.
+                    </p>
+                </li>
+                <li class="portfolio__second-element">
+                    <img class="portfolio__img portfolio__img-keksobooking">
+                    <p class="portfolio__describe">
+                        Keksobukig - booking hotel.
+                    </p>
+                </li>
+                <li class="portfolio__third-element">
+                    <img class="portfolio__img portfolio__img-cat-energy">
+                    <p class="portfolio__describe">
+                        Cat Energy - online store of food for cats;
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="contacts">
+            <h3 class="contacts__title">Contacts</h3>
+            <p class="contacts__welcome">
+                Want to know more or just chat? 
+                You are welcome!
+            </p>
+            <button class="contacts__button"><a href="mailto:crocozybra.v@gmail.com">Send message</a></button>
+            <ul class="contacts__list-social">
+                <li class="contacts__list-social-telegram">
+                    <a class="contacts__link" href="https://t.me/TakeshiYamamotoo">
+                        <img class="contacts__img" src="./img/telegram.svg">
+                    </a>
+                </li>
+                <li class="contacts__list-social-whatsapp">
+                    <a class="contacts__link" href="https://wa.me/+79660810433">
+                        <img class="contacts__img" src="./img/whatsapp.svg">
+                    </a>
+                </li>
+                <li class="contacts__list-social-github">
+                    <a class="contacts__link" href="https://github.com/FOX521">
+                        <img class="contacts__img" src="./img/github.svg">
+                    </a>
+                </li>
+                <li class="contacts__list-social-mail">
+                    <a class="contacts__link" href="mailto:crocozybra.v@gmail.com">
+                        <img class="contacts__img" src="./img/mail.svg">
+                    </a>
+                </li>
+            </ul>
+            <div class="contacts__describe-link">
+                <p class="contacts__describe-link-soc">Like me on</p>
+                <p class="contacts__describe-link-soc">Telegram, Whatsapp, GitHub</p>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
