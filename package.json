@@ -1,0 +1,37 @@
+{
+  "name": "mysite",
+  "version": "1.0.0",
+  "description": "'My first progect with Gulp'",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test",
+    "start": "gulp",
+    "build": "gulp styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FOX521/mySite.git"
+  },
+  "author": "'Vadim Usenko'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FOX521/mySite/issues"
+  },
+  "homepage": "https://github.com/FOX521/mySite#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-less": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-webp": "^4.0.1"
+  }
+}
