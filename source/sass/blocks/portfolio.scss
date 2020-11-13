@@ -13,6 +13,11 @@
 }
 
 .portfolio__list {
+    padding: 0;
     margin: 0;
     list-style: none;    
+}
+
+.portfolio__img {
+    width: 300px;
 }

@@ -20,5 +20,16 @@
 }
 
 .skills__list {
+    padding: 0;
+    margin: 0;
     list-style: none;
+}
+
+.skills__img {
+    width: 80px;
+    height: 80px;
+}
+
+.skills__img-sql {
+    width: 140px;
 }
