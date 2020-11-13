@@ -1,0 +1,18 @@
+.portfolio {
+    padding-top: 81px;
+    text-align: center;
+    background-color: var(--color-bg-grey);
+}
+
+.portfolio__title {
+    font-size: 34px;
+    line-height: 42px;
+    color: var(--color-main-black);
+    margin-bottom: 65px;
+    font-family: var(--font-family-main);
+}
+
+.portfolio__list {
+    margin: 0;
+    list-style: none;    
+}

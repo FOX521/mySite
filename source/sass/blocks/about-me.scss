@@ -1,0 +1,22 @@
+.about-me {
+    padding-top: 81px;
+    padding-bottom: 29px;
+    background-color: var(--color-bg-grey);
+    color: var(--color-main-black);
+    font-family: var(--font-family-little);
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.about-me .about-me__title {
+    margin-bottom: 29px;
+    font-size: 34px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.about-me__describe-first,
+.about-me__describe-second {
+    padding-bottom: 29px;
+}
