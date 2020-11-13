@@ -1,0 +1,24 @@
+.skills {
+    padding-top: 83px;
+    background-color: var(--color-bg-white);
+    text-align: center;
+}
+
+.skills__title {
+    color: var(--color-main-black);
+    font-family: var(--font-family-main);
+    font-size: 34px;
+    line-height: 42px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.skills__advantages {
+    font-size: 18px;
+    line-height: 22px;
+    font-family: var(--font-family-little);
+}
+
+.skills__list {
+    list-style: none;
+}
