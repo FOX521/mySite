@@ -21,7 +21,7 @@
 }
 
 .contacts__button {
-    width: 100%;
+    width: 70%;
     height: 42px;
     background-color: var(--color-main-black);
     color: var(--color-bg-white);
@@ -36,8 +36,10 @@
 .contacts__list-social {
     padding: 0;
     margin: 0;
-    list-style: none;
     margin-bottom: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 
 .contacts__describe-link {

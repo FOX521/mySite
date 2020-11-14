@@ -17,8 +17,14 @@
     padding-left: 10px;
     padding-right: 10px;
     margin: 0 auto;
+    box-sizing: border-box;
 
     @include tablet {
-      min-width: 768px;
+      min-width: 748px;
+    }
+
+    @include desktop {
+        max-width: 1024px;
     }
 }
+

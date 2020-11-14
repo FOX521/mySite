@@ -13,6 +13,10 @@ nav {
     background-color: transparent;
     cursor: pointer;
     border: none;
+
+    @include tablet {
+      display: none;
+    }
 }
 
 .nav__closed .nav__button::before {
@@ -66,6 +70,13 @@ nav {
 
 .nav__closed .nav__list {
     display: none;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 0;
+    }
 }
 
 .nav__list-element {
@@ -82,4 +93,19 @@ nav {
 .nav__language {
     text-decoration: none;
     color: var(--color-main-black);
+    height: 10px;
+
+    @include tablet {
+      align-self: flex-end;
+      transform: rotate(90deg);
+      margin-bottom: 25px;
+    }
+}
+
+.nav__block {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

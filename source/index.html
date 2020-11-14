@@ -13,7 +13,7 @@
 <body class="body container">
     <main class="main">
         <header class="header">
-            <nav class="nav nav__closed">
+            <nav class="nav nav__opened">
                 <button class="button nav__button"><span class="visually-hidden">Close</span></button>
                 <ul class="nav__list">
                     <li class="nav__list-element nav__list-element-first">Home</li>
@@ -22,12 +22,14 @@
                     <li class="nav__list-element nav__list-element-first">Portfolio</li>
                     <li class="nav__list-element nav__list-element-first">Contacts</li>    
                 </ul>
-                <a class="nav__language" href="#"><span class="nav__language-ru">RU</span>|<span class="nav__language-eng">ENG</span></a>
             </nav>
-            <h1 class="header__title">Usenko Vadim</h1>
-            <p class="header__about-me">Front-end developer,
-                25 years old , Moscow
-            </p>
+            <div class="nav__block">
+                <h1 class="header__title">Usenko Vadim</h1>
+                <p class="header__about-me">Front-end developer,
+                    25 years old , Moscow
+                </p>
+                <a class="nav__language" href="#"><span class="nav__language-ru">RU</span>|<span class="nav__language-eng">ENG</span></a>
+            </div>
                 <img class="header__photo-demonstration">
         </header>
         <section class="about-me">
@@ -100,15 +102,21 @@
             <ul class="portfolio__list">
                 <li class="portfolio__first-element">
                     <img class="portfolio__img portfolio__img-glacy" src="./img/glacy.png">
-                    <p class="portfolio__describe"></p>
+                    <p class="portfolio__describe">
+                        <a class="portfolio__describe-glacy portfolio__describe-link" href="#">Glacy - online shop ice cream.</a>
+                    </p>
                 </li>
                 <li class="portfolio__second-element">
-                    <img class="portfolio__img portfolio__img-cat-energy" src="./img/Mobile.png">
-                    <p class="portfolio__describe"></p>
+                    <img class="portfolio__img portfolio__img-cat-energy" src="./img/cat-energy-mobile.png">
+                    <p class="portfolio__describe">
+                        <a class="portfolio__describe-cat  portfolio__describe-link" href="#">Cat Energy - online shop food for cats.</a>
+                    </p>
                 </li>
                 <li class="portfolio__third-element">
                     <img class="portfolio__img portfolio__img-keksobooking" src="./img/keksobooking.png">
-                    <p class="portfolio__describe"></p>
+                    <p class="portfolio__describe">
+                        <a class="portfolio__describe-keks portfolio__describe-link" href="#">Keksobooking - service for booking a hotel.</a>
+                    </p>
                 </li>
             </ul>
         </section>
@@ -120,21 +128,26 @@
                 Want to know more or just chat? 
                 You are welcome!
             </p>
-            <button class="contacts__button">Send message</button>
+            <a href="mailto:mail@gmail.com">
+                <button class="contacts__button">Send message</button>
+            </a>
             <ul class="contacts__list-social">
                 <li class="contacts__list-social-first-element">
-                    <a class="contacts__link">
+                    <a class="contacts__link" href="skype:vadim.usenkow?chat">
                         <img class="contacts__img contacts__img-skype" src="./img/icon-skype.webp">
+                        <span class="visually-hidden">Skype</span>
                     </a>
                 </li>
                 <li class="contacts__list-social-second-element">
-                    <a class="contacts__link">
+                    <a class="contacts__link" href="https://api.whatsapp.com/send?phone=9660810433  ">
                         <img class="contacts__img contacts__img-whatsapp" src="./img/icon-whatsapp.webp">
+                        <span class="visually-hidden">Whatsapp</span>
                     </a>
                 </li>
                 <li class="contacts__list-social-third-element">
-                    <a class="contacts__link">
+                    <a class="contacts__link" href="https://t.me/TakeshiYamamotoo">
                         <img class="contacts__img contacts__img-telegram" src="./img/telegram.webp">
+                        <span class="visually-hidden">Telegram</span>
                     </a>
                 </li>
             </ul>
@@ -144,5 +157,6 @@
             </div>
         </section>
     </footer>
+    <script src="./js/main.js"></script>
 </body>
 </html>
