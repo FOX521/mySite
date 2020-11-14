@@ -9,5 +9,16 @@
     -webkit-clip-path: inset(100%);
             clip-path: inset(100%);
     clip: rect(0 0 0 0);
-    overflow: hidden; }
-  
+    overflow: hidden;
+}
+
+.container {
+    min-width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+
+    @include tablet {
+      min-width: 768px;
+    }
+}

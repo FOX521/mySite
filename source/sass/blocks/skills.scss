@@ -1,5 +1,5 @@
 .skills {
-    padding-top: 83px;
+    padding-top: 50px;
     background-color: var(--color-bg-white);
     text-align: center;
 }
@@ -14,6 +14,7 @@
 }
 
 .skills__advantages {
+    margin-bottom: 40px;
     font-size: 18px;
     line-height: 22px;
     font-family: var(--font-family-little);
@@ -23,13 +24,18 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills__element {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .skills__img {
     width: 80px;
     height: 80px;
-}
-
-.skills__img-sql {
-    width: 140px;
+    border-radius: 20px;
 }

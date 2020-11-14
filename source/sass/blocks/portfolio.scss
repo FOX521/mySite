@@ -1,5 +1,5 @@
 .portfolio {
-    padding-top: 81px;
+    padding-top: 50px;
     text-align: center;
     background-color: var(--color-bg-grey);
 }
@@ -19,5 +19,6 @@
 }
 
 .portfolio__img {
-    width: 300px;
+    width: 100%;
+    max-width: 70%;
 }
