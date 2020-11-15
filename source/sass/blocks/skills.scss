@@ -33,6 +33,7 @@
 .skills__element {
     margin-left: 20px;
     margin-right: 20px;
+    cursor: pointer;
 
     &:hover > .skills__list-block {
         display: block;

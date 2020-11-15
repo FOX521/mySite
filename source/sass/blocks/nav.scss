@@ -69,6 +69,11 @@ nav {
     }
 }
 
+.nav__list a {
+  color: var(--color-bg-black);
+  text-decoration: none;
+}
+
 .nav__opened .nav__list {
     display: block;
 }
