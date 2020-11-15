@@ -1,4 +1,5 @@
 .portfolio {
+    margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 1px;
     text-align: center;
@@ -16,7 +17,13 @@
 .portfolio__list {
     padding: 0;
     margin: 0;
-    list-style: none;    
+    list-style: none;  
+    
+    @include laptop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
 .portfolio__img {
@@ -28,6 +35,7 @@
     font-family: var( --font-family-little);
     margin-top: 30px;
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .portfolio__describe-link {

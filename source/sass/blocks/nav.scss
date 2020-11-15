@@ -62,6 +62,11 @@ nav {
     font-size: 25px;
     line-height: 42px;
     color: var(--color-dark-grey);
+
+    @include tablet {
+      padding-bottom: 15px;
+      border-bottom: 1px solid;
+    }
 }
 
 .nav__opened .nav__list {
