@@ -27,8 +27,17 @@
 }
 
 .portfolio__img {
-    width: 80%;
+    width: 48%;
     max-width: 400px;
+}
+
+.portfolio__img-main {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--color-bg-white);
 }
 
 .portfolio__describe {
@@ -41,3 +50,11 @@
 .portfolio__describe-link {
     color: var(--color-bg-black);
 }
+
+.portfolio__list-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
