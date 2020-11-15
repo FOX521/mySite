@@ -1,5 +1,5 @@
 .skills {
-    padding-top: 83px;
+    padding-top: 50px;
     background-color: var(--color-bg-white);
     text-align: center;
 }
@@ -14,11 +14,104 @@
 }
 
 .skills__advantages {
+    margin-bottom: 40px;
     font-size: 18px;
     line-height: 22px;
     font-family: var(--font-family-little);
 }
 
 .skills__list {
+    position: relative;
+    padding: 0;
+    margin: 0;
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills__element {
+    margin-left: 20px;
+    margin-right: 20px;
+
+    &:hover > .skills__list-block {
+        display: block;
+    }
+
+    @include tablet {
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+
+    @include laptop {
+      margin-left: 45px;
+      margin-right: 45px; 
+    }
+
+    @include desktop {
+      margin-left: 61px;
+      margin-right: 61px;
+    }
+}
+
+.skills__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.skills__list-block {
+    display: none;
+    padding-top: 25px;
+    position: absolute;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 200px;
+    height: min-content;
+    background-color: var(--color-bg-grey);
+    border: 1px solid;
+    border-radius: 15px;
+
+    @include tablet {
+        min-width: 350px;
+    }
+
+    @include laptop {
+        min-width: 450px;
+    }
+}
+
+.skills__button-close {
+    position: absolute;
+    top: 7px;
+    right: 16px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: transparent;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      width: 24px;
+      height: 2px;
+      background-color: var(--color-main-black);
+    }
+  
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+  
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    @include laptop {
+        display: none;
+    }
 }

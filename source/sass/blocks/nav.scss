@@ -1,7 +1,11 @@
+nav {
+    position: relative;
+}
+
 .nav__button {
     position: absolute;
-    top: -50px;
-    right: -14px;
+    top: -3px;
+    right: 0px;
     z-index: 2;
     display: block;
     width: 50px;
@@ -9,43 +13,75 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
-}
 
-.nav__closed {
-    &::before {
-        content: '';
-        position: absolute;
-        top: 35px;
-        right: 30px;
-        width: 20px;
-        height: 20px;
-        background-image: url(../img/icon-cross.svg);
-        background-size: 20px;
-        background-repeat: no-repeat;
-        cursor: pointer;
+    @include tablet {
+      display: none;
     }
 }
 
-.nav__openned {
-    &::before {
-        content: '';
-        position: absolute;
-        top: 24px;
-        right: 10px;
-        width: 50px;
-        height: 50px;
-        background-image: url(../img/icon-menu.svg);
-        background-size: 50px;
-        background-repeat: no-repeat;
-        cursor: pointer;
+.nav__closed .nav__button::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 14px;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-main-black);
+    box-shadow:
+      0 8px 0 0 var(--color-main-black),
+      0 16px 0 0 var(--color-main-black);
+ }
+
+ .nav__opened .nav__button {
+    top: -3px;
+    right: -0px;
+  
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      right: 13px;
+      width: 24px;
+      height: 2px;
+      background-color: var(--color-main-black);
     }
-}
+  
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+  
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 
 .nav__list {
     list-style: none;
     font-size: 25px;
     line-height: 42px;
     color: var(--color-dark-grey);
+
+    @include tablet {
+      padding-bottom: 15px;
+      border-bottom: 1px solid;
+    }
+}
+
+.nav__opened .nav__list {
+    display: block;
+}
+
+.nav__closed .nav__list {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 0;
+    }
 }
 
 .nav__list-element {
@@ -62,4 +98,19 @@
 .nav__language {
     text-decoration: none;
     color: var(--color-main-black);
+    height: 10px;
+
+    @include tablet {
+      align-self: flex-end;
+      transform: rotate(90deg);
+      margin-bottom: 25px;
+    }
+}
+
+.nav__block {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }

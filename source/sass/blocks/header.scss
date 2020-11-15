@@ -8,10 +8,35 @@
     line-height: 58px;
     width: 124px;
     height: 106px;
+
+    @include tablet {
+        margin: 0;
+    }
 }
 
 .header__photo-demonstration {
-    margin-bottom: 83px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: block;
+    width: 300px;
+    height: 478px;
+    background-image: url('../img/me-mobile.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+
+    @include tablet {
+        margin-top: 70px;
+        margin-bottom: 0;
+        background-image: url('../img/me-desktop.jpg');
+        width: 100%;
+        max-width: 945px;
+        height: 387px;
+    }
+
+    @include laptop {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
 }
 
 
@@ -21,4 +46,9 @@
     font-family: var(--font-family-little);
     width: 205px;
     height: 44px;
+
+    @include tablet {
+        margin: 0;
+       align-self: flex-end;
+    }
 }

@@ -1,6 +1,6 @@
 .contacts {
     text-align: center;
-    padding-top: 82px;
+    padding-top: 50px;
     margin-top: -16px;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .contacts__button {
-    width: 316px;
+    width: 70%;
     height: 42px;
     background-color: var(--color-main-black);
     color: var(--color-bg-white);
@@ -30,11 +30,20 @@
     line-height: 22px;
     font-family: var(--font-family-little);
     margin-bottom: 50px;
+    cursor: pointer;
 }
 
 .contacts__list-social {
-    list-style: none;
+    padding: 0;
+    margin: 0 auto;
     margin-bottom: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+    @include tablet {
+        max-width: 70%;
+    }
 }
 
 .contacts__describe-link {
@@ -45,4 +54,10 @@
 
 .contacts__describe-link-soc {
     margin: 0;
+}
+
+.contacts__img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }

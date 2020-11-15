@@ -1,5 +1,7 @@
 .portfolio {
-    padding-top: 81px;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 1px;
     text-align: center;
     background-color: var(--color-bg-grey);
 }
@@ -13,6 +15,29 @@
 }
 
 .portfolio__list {
+    padding: 0;
     margin: 0;
-    list-style: none;    
+    list-style: none;  
+    
+    @include laptop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.portfolio__img {
+    width: 80%;
+    max-width: 400px;
+}
+
+.portfolio__describe {
+    font-family: var( --font-family-little);
+    margin-top: 30px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.portfolio__describe-link {
+    color: var(--color-bg-black);
 }
