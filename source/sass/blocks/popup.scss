@@ -35,6 +35,7 @@
 
 .wrapper__popup-close-button {
     position: absolute;
+    z-index: 3;
     top: 12px;
     right: 12px;
     width: 25px;
@@ -62,6 +63,38 @@
     &::after {
       transform: rotate(-45deg);
     }
+}
+
+.wrapper__popup-close-button-white {
+  position: absolute;
+  z-index: 3;
+  top: 12px;
+  right: 12px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  display: block;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-bg-white);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .wrapper__popup-title {
@@ -105,4 +138,19 @@
   padding-left: 10px ;
   font-family: var(--font-family-little);
   font-size: 14px;
+
+  @include laptop {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.8);
+    color: white;
+  }
+}
+
+.wrapper__popup-title-describe {
+  @include laptop {
+    margin-top: 140px
+  }
 }
