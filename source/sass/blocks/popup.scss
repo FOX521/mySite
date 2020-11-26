@@ -149,6 +149,13 @@
   }
 }
 
+.wrapper__popup-describe-animation {
+  @include laptop {
+    display: block;
+    transition-duration: 1s;
+  }
+}
+
 .wrapper__popup-title-describe {
   text-align: center;
   font-family: var(--font-family-main);

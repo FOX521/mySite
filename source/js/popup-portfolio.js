@@ -22,15 +22,14 @@ function omMouseMove (movEvt) {
     let resultX = Math.floor(moveX);
     let closeButton = document.querySelectorAll(`.wrapper__popup-close-button`);
     if (  1000 > resultX || resultX > 1470) {
-        console.log();
         for(let i = 0; i < wrapperPopupDescribe.length; i++) {
             wrapperPopupDescribe[i].style.display = `none`;
         }
         for(let i = 0; i < closeButton.length; i++) {
             closeButton[i].classList.remove(`wrapper__popup-close-button-white`);
         }
-    } else {
-        for(let i = 0; i < wrapperPopupDescribe.length; i++) {
+    } else { 
+         for(let i = 0; i < wrapperPopupDescribe.length; i++) {
             wrapperPopupDescribe[i].style.display = `block`;
         }
         for(let i = 0; i < closeButton.length; i++) {
