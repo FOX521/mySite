@@ -1,6 +1,4 @@
-const windowInnerWidth = document.documentElement.clientWidth;
-const windowInnerHeight = document.documentElement.clientHeight;
-if (windowInnerWidth <= 1000) {
+if (window.utill.windowInnerWidth <= 1000) {
     let skills = document.querySelector(`.skills`);
     let skillsElement = skills.querySelectorAll(`.skills__element`);
     for(let i = 0; i < skillsElement.length; i++) {

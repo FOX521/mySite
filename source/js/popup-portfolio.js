@@ -1,5 +1,3 @@
-'use strict';
-
 let portfolio = document.querySelector(`.portfolio`);
 let portfolioList = portfolio.querySelector(`.portfolio__list`);
 let portfolioElement = portfolioList.querySelectorAll(`.portfolio__element`);
@@ -12,6 +10,7 @@ let popupKeksobooking = document.querySelector(`.wrapper-keksobooking`);
 let wrapperPopup = document.querySelectorAll(`.wrapper__popup`);
 let wrapperPopupDescribe = document.querySelectorAll(`.wrapper__popup-describe`);
 
+if (window.utill.windowInnerWidth > 1000 ) {
 for(let i = 0; i < wrapperPopup.length; i++) {
     wrapperPopup[i].addEventListener(`mousemove`, omMouseMove);
 };
@@ -22,7 +21,7 @@ function omMouseMove (movEvt) {
     let moveX = movEvt.clientX;
     let resultX = Math.floor(moveX);
     let closeButton = document.querySelectorAll(`.wrapper__popup-close-button`);
-    if ( 500 < resultX && 1050 > resultX) {
+    if (  1000 > resultX || resultX > 1470) {
         console.log();
         for(let i = 0; i < wrapperPopupDescribe.length; i++) {
             wrapperPopupDescribe[i].style.display = `none`;
@@ -39,19 +38,31 @@ function omMouseMove (movEvt) {
         }
     }
 }
+};
+
+function hiddenScroll () {
+    window.utill.body.setAttribute(`style`, `overflow: hidden`);
+}
+
+function showScroll () {
+    window.utill.body.setAttribute(`style`, `overflow: auto`);
+}
 
 imgCatEnergy.addEventListener(`click`, function () {
     popupCatEnergy.setAttribute(`style`, `display: block`);
+    hiddenScroll();
     closePopup(popupCatEnergy);
 });
 
 imgGlacy.addEventListener(`click`, function (evt) {
     popupGlacy.setAttribute(`style`, `display: block`);
+    hiddenScroll();
     closePopup(popupGlacy);
 });
 
 imgKeksBook.addEventListener(`click`, function (evt) {
     popupKeksobooking.setAttribute(`style`, `display: block`);
+    hiddenScroll();
     closePopup(popupKeksobooking);
 });
 
@@ -59,6 +70,6 @@ function closePopup (type) {
     let closeButton = type .querySelector(`.wrapper__popup-close-button`);
     closeButton.addEventListener(`click`, function onClickClose () {
         type.setAttribute(`style`, `display: none`);
+        showScroll();
     });
 };
-

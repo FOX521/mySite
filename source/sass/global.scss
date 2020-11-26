@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+    width: 0;
+}
+
 .visually-hidden:not(:focus):not(:active) {
     position: absolute;
     width: 1px;
@@ -31,4 +35,5 @@
 .page {
     position: relative;
 }
+
 
