@@ -1,4 +1,5 @@
 let portfolio = document.querySelector(`.portfolio`);
+let wrapper = document.querySelectorAll(`.wrapper`);
 let portfolioList = portfolio.querySelector(`.portfolio__list`);
 let portfolioElement = portfolioList.querySelectorAll(`.portfolio__element`);
 let imgKeksBook = portfolio.querySelector(`.portfolio__img-main-keksobooking`);
@@ -7,37 +8,39 @@ let imgGlacy = portfolio.querySelector(`.portfolio__img-main-glacy`);
 let popupGlacy = document.querySelector(`.wrapper-glacy`);
 let popupCatEnergy = document.querySelector(`.wrapper-cat-energy`);
 let popupKeksobooking = document.querySelector(`.wrapper-keksobooking`);
-let wrapperPopup = document.querySelectorAll(`.wrapper__popup`);
+let wrapperPopup = document.querySelectorAll(`.wrapper__popup-describe`);
 let wrapperPopupDescribe = document.querySelectorAll(`.wrapper__popup-describe`);
-
+let closeButton = document.querySelectorAll(`.wrapper__popup-close-button`);
 if (window.utill.windowInnerWidth > 1000 ) {
 for(let i = 0; i < wrapperPopup.length; i++) {
-    wrapperPopup[i].addEventListener(`mousemove`, omMouseMove);
+    wrapperPopup[i].addEventListener(`mouseover`, omMouseOver);
+    wrapperPopup[i].addEventListener(`mouseout`, omMouseOut);
 };
 
-function omMouseMove (movEvt) {
+function omMouseOut () {
+    for(let i = 0; i < closeButton.length; i++) {
+        closeButton[i].classList.toggle(`wrapper__popup-close-button-white`);
+    }
+}
+
+function omMouseOver (movEvt) {
     movEvt.preventDefault();
-    
-    let moveX = movEvt.clientX;
-    let resultX = Math.floor(moveX);
-    let closeButton = document.querySelectorAll(`.wrapper__popup-close-button`);
+    let resultX = Math.floor(movEvt.clientX);
     if (  1000 > resultX || resultX > 1470) {
-        for(let i = 0; i < wrapperPopupDescribe.length; i++) {
-            wrapperPopupDescribe[i].style.display = `none`;
-        }
-        for(let i = 0; i < closeButton.length; i++) {
-            closeButton[i].classList.remove(`wrapper__popup-close-button-white`);
-        }
+        omMouseOut();
     } else { 
-         for(let i = 0; i < wrapperPopupDescribe.length; i++) {
-            wrapperPopupDescribe[i].style.display = `block`;
-        }
         for(let i = 0; i < closeButton.length; i++) {
-            closeButton[i].classList.add(`wrapper__popup-close-button-white`);
+            closeButton[i].classList.toggle(`wrapper__popup-close-button-white`);
         }
     }
 }
 };
+
+wrapper.forEach((element) => {
+ element.addEventListener(`click`,closePopup);
+ element.addEventListener(`keydown`,closePopup);
+});
+
 
 function hiddenScroll () {
     window.utill.body.setAttribute(`style`, `overflow: hidden`);
@@ -72,3 +75,5 @@ function closePopup (type) {
         showScroll();
     });
 };
+
+

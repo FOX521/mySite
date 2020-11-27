@@ -14,6 +14,7 @@
 
 .wrapper__popup {
     position: fixed;
+    overflow-x: hidden;
     margin: auto;
     width: 100%;
     overflow-y: auto;
@@ -36,10 +37,10 @@
 .wrapper__popup-close-button {
     position: absolute;
     z-index: 3;
-    top: 12px;
-    right: 12px;
-    width: 25px;
-    height: 25px;
+    top: 25px;
+    right: 25px;
+    width: 30px;
+    height: 30px;
     border: none;
     display: block;
     background-color: transparent;
@@ -50,9 +51,10 @@
       position: absolute;
       top: 10px;
       right: 0px;
-      width: 24px;
+      width: 30px;
       height: 2px;
       background-color: var(--color-main-black);
+      transition-duration: 1s;
     }
   
     &::before {
@@ -68,10 +70,10 @@
 .wrapper__popup-close-button-white {
   position: absolute;
   z-index: 3;
-  top: 12px;
-  right: 12px;
-  width: 25px;
-  height: 25px;
+  top: 25px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
   border: none;
   display: block;
   background-color: transparent;
@@ -80,11 +82,13 @@
   &::after {
     content: "";
     position: absolute;
+    display: block;
     top: 10px;
     right: 0px;
-    width: 24px;
+    width: 30px;
     height: 2px;
     background-color: var(--color-bg-white);
+    transition-duration: 1s;
   }
 
   &::before {
@@ -141,18 +145,22 @@
 
   @include laptop {
     position: absolute;
+    opacity: 0;
     top: -20px;
     right: 0;
-    height: 100%;
+    height: 101%;
     background-color: rgba(0,0,0, 0.8);
     color: white;
+    transition-duration: 1s;
+    transform: translate( 300px,0px);
   }
 }
 
-.wrapper__popup-describe-animation {
+.wrapper__popup-describe-animation:hover {
   @include laptop {
-    display: block;
-    transition-duration: 1s;
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition-duration: 1s;
   }
 }
 
