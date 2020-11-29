@@ -1,3 +1,4 @@
+const KEY_CODE_ESC = 27;
 let portfolio = document.querySelector(`.portfolio`);
 let wrapper = document.querySelectorAll(`.wrapper`);
 let portfolioList = portfolio.querySelector(`.portfolio__list`);
@@ -11,6 +12,9 @@ let popupKeksobooking = document.querySelector(`.wrapper-keksobooking`);
 let wrapperPopup = document.querySelectorAll(`.wrapper__popup-describe`);
 let wrapperPopupDescribe = document.querySelectorAll(`.wrapper__popup-describe`);
 let closeButton = document.querySelectorAll(`.wrapper__popup-close-button`);
+
+
+
 if (window.utill.windowInnerWidth > 1000 ) {
 for(let i = 0; i < wrapperPopup.length; i++) {
     wrapperPopup[i].addEventListener(`mouseover`, omMouseOver);
@@ -36,11 +40,16 @@ function omMouseOver (movEvt) {
 }
 };
 
-wrapper.forEach((element) => {
- element.addEventListener(`click`,closePopup);
- element.addEventListener(`keydown`,closePopup);
-});
 
+
+for(let i = 0; i < wrapper.length; i++) {
+    document.addEventListener(`keydown`, (evt) =>  {
+        if (evt.keyCode === KEY_CODE_ESC) {
+            wrapper[i].setAttribute(`style`, `display: none`);
+        }
+        showScroll();
+    });
+};
 
 function hiddenScroll () {
     window.utill.body.setAttribute(`style`, `overflow: hidden`);
@@ -50,19 +59,19 @@ function showScroll () {
     window.utill.body.setAttribute(`style`, `overflow: auto`);
 }
 
-imgCatEnergy.addEventListener(`click`, function () {
+imgCatEnergy.addEventListener(`click`, () => {
     popupCatEnergy.setAttribute(`style`, `display: block`);
     hiddenScroll();
     closePopup(popupCatEnergy);
 });
 
-imgGlacy.addEventListener(`click`, function (evt) {
+imgGlacy.addEventListener(`click`, () => {
     popupGlacy.setAttribute(`style`, `display: block`);
     hiddenScroll();
     closePopup(popupGlacy);
 });
 
-imgKeksBook.addEventListener(`click`, function (evt) {
+imgKeksBook.addEventListener(`click`, () => {
     popupKeksobooking.setAttribute(`style`, `display: block`);
     hiddenScroll();
     closePopup(popupKeksobooking);
@@ -70,10 +79,8 @@ imgKeksBook.addEventListener(`click`, function (evt) {
 
 function closePopup (type) {
     let closeButton = type .querySelector(`.wrapper__popup-close-button`);
-    closeButton.addEventListener(`click`, function onClickClose () {
+    closeButton.addEventListener(`click`,  () => {
         type.setAttribute(`style`, `display: none`);
         showScroll();
     });
 };
-
-
