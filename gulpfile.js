@@ -10,6 +10,14 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const ghPages = require('gulp-gh-pages');
+
+const deploy = () => {
+  return gulp.src('./build/**/*')
+  .pipe(ghPages());
+}
+
+exports.deploy = deploy;
 
 const sprite = () => {
   return gulp.src("source/img/**/icon-*.svg")
