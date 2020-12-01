@@ -10,9 +10,35 @@ let imgMain = portfolio.querySelectorAll(`.portfolio__img-main`);
 let wrapper = document.querySelectorAll(`.wrapper`);
 
 
+createPopup = (currentIndex) => {
+    let templatePopup = document.querySelector(`#template-popup`).content;
+    let popupArticle = templatePopup.querySelector(`article`);
+    let cloneElement = popupArticle.cloneNode(true);
+    fullCloneElement = addInfo(cloneElement, currentIndex);
+    footerElement.append(fullCloneElement);
+};
+
+function closePopup (popupElement) {
+    document.addEventListener(`keydown`, (evt) =>  {
+        if (evt.keyCode === KEY_CODE_ESC) {
+            let popup = document.querySelector(popupElement)
+            popup.remove();
+            wrapperPopup.removeEventListener(`mouseover`, omMouseOver);
+            wrapperPopup.removeEventListener(`mouseout`, omMouseOut);
+            showScroll();
+        }
+    });
+
+    closeButton.addEventListener(`click`,  () => {
+        let  popup = document.querySelector(popupElement);
+        popup.remove();
+        wrapperPopup.removeEventListener(`mouseover`, omMouseOver);
+        wrapperPopup.removeEventListener(`mouseout`, omMouseOut);
+        showScroll();
+    });
+};
 
 
-if (window.utill.windowInnerWidth > 1000 ) {
 
 function hiddenScroll () {
     window.utill.body.setAttribute(`style`, `overflow: hidden`);
@@ -21,6 +47,7 @@ function hiddenScroll () {
 function showScroll () {
     window.utill.body.setAttribute(`style`, `overflow: auto`);
 }
+
 
 const dataPopup = [
     {
@@ -48,7 +75,7 @@ const dataPopup = [
     {
         popupTitle: `Cat Energy`,
         img: `./img/cat-energy.png`,
-        describePopup: ` Данный проект был пролностью реализован мной.
+        describePopup: `Данный проект был пролностью реализован мной.
         Какие технологии использовалась:
         - HTML5
         - CSS3
@@ -86,14 +113,6 @@ const dataPopup = [
     }
 ];
 
-createPopup = (currentIndex) => {
-    let templatePopup = document.querySelector(`#template-popup`).content;
-    let popupArticle = templatePopup.querySelector(`article`);
-    let cloneElement = popupArticle.cloneNode(true);
-    fullCloneElement = addInfo(cloneElement, currentIndex);
-    footerElement.append(fullCloneElement);
-};
-
 addInfo = (emptyClone, currentIndex) => {
     emptyClone.querySelector(`.wrapper__popup-title`).textContent = dataPopup[currentIndex].popupTitle;
     emptyClone.querySelector(`.wrapper__popup-img`).setAttribute(`src`, dataPopup[currentIndex].img);
@@ -117,26 +136,6 @@ for(let i = 0; i < imgMain.length; i++) {
     });
 };
 
-function closePopup (popupElement) {
-    document.addEventListener(`keydown`, (evt) =>  {
-        if (evt.keyCode === KEY_CODE_ESC) {
-            let popup = document.querySelector(popupElement)
-            popup.remove();
-            wrapperPopup.removeEventListener(`mouseover`, omMouseOver);
-            wrapperPopup.removeEventListener(`mouseout`, omMouseOut);
-            showScroll();
-        }
-    });
-    closeButton.addEventListener(`click`,  () => {
-        let  popup = document.querySelector(popupElement);
-        console.log(popup)
-        popup.remove();
-        wrapperPopup.removeEventListener(`mouseover`, omMouseOver);
-        wrapperPopup.removeEventListener(`mouseout`, omMouseOut);
-        showScroll();
-    });
-}
-
 function omMouseOut () {
     closeButton.classList.toggle(`wrapper__popup-close-button-white`);
 };
@@ -149,5 +148,4 @@ function omMouseOver (movEvt) {
     } else { 
         closeButton.classList.toggle(`wrapper__popup-close-button-white`);
     }
-}
 };
