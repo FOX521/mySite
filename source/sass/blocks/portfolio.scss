@@ -31,6 +31,17 @@
     width: 150px;
     height: 300px;
     object-fit: cover;
+
+    @include  tablet {
+        width: 315px;
+        height: auto;
+        object-fit: fill;
+    }
+
+    @include desktop {
+        width: 150px;
+        height: 300px;
+    }
 }
 
 .portfolio__img-main {
