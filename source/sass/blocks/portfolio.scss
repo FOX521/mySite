@@ -27,13 +27,26 @@
 }
 
 .portfolio__img {
-    width: 48%;
-    max-width: 400px;
+    flex: 0 0 auto;
+    width: 150px;
+    height: 300px;
+    object-fit: cover;
+
+    @include  tablet {
+        width: 315px;
+        height: auto;
+        object-fit: fill;
+    }
+
+    @include desktop {
+        width: 150px;
+        height: 300px;
+    }
 }
 
 .portfolio__img-main {
     position: absolute;
-    height: 92%;
+    height: 100%;
     top: 20px;
     left: 0;
     right: 0;
@@ -54,6 +67,7 @@
 
 .portfolio__list-block {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
     position: relative;
