@@ -18,19 +18,17 @@
     margin: 0 auto;
     margin-bottom: 50px;
     display: block;
-    width: 300px;
-    height: 478px;
-    background-image: url('../img/me-mobile.jpg');
+    width: 100%;
+    height: auto;
     background-size: auto;
     background-repeat: no-repeat;
 
     @include tablet {
         margin-top: 70px;
         margin-bottom: 0;
-        background-image: url('../img/me-desktop.jpg');
         width: 100%;
         max-width: 945px;
-        height: 387px;
+        height: auto;
     }
 
     @include laptop {
