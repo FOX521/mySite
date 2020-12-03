@@ -52,7 +52,7 @@ function showScroll () {
 const dataPopup = [
     {
         popupTitle: `Gllacy`,
-        img: `./img/glacy.png`,
+        img: `./img/glacy.jpg`,
         describePopup: `Данный проект был пролностью реализован мной.
         Какие технологии использовалась: 
         - HTML5
@@ -74,7 +74,7 @@ const dataPopup = [
     },
     {
         popupTitle: `Cat Energy`,
-        img: `./img/cat-energy.png`,
+        img: `./img/cat-energy-main.jpg`,
         describePopup: `Данный проект был пролностью реализован мной.
         Какие технологии использовалась:
         - HTML5
@@ -96,7 +96,7 @@ const dataPopup = [
     },
     {
         popupTitle: `Keksobooking`,
-        img: `./img/keksobooking.png`,  
+        img: `./img/keksobooking.jpg`,  
         describePopup: `В данном проекте использовалась готовая верстка сайта.
         Какие технологии использовалась:
         - Webpack для сборки js модулей.
