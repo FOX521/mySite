@@ -53,7 +53,8 @@ const dataPopup = [
     {
         popupTitle: `Gllacy`,
         img: `./img/glacy.jpg`,
-        describePopup: `Данный проект был пролностью реализован мной.
+        describePopup: `
+        Данный проект был пролностью реализован мной.
         Какие технологии использовалась: 
         - HTML5
         - CSS3
@@ -75,7 +76,8 @@ const dataPopup = [
     {
         popupTitle: `Cat Energy`,
         img: `./img/cat-energy-main.jpg`,
-        describePopup: `Данный проект был пролностью реализован мной.
+        describePopup: `
+        Данный проект был пролностью реализован мной.
         Какие технологии использовалась:
         - HTML5
         - CSS3
@@ -97,7 +99,8 @@ const dataPopup = [
     {
         popupTitle: `Keksobooking`,
         img: `./img/keksobooking.jpg`,  
-        describePopup: `В данном проекте использовалась готовая верстка сайта.
+        describePopup: `
+        В данном проекте использовалась готовая верстка сайта.
         Какие технологии использовалась:
         - Webpack для сборки js модулей.
         - Чистый JavaScript без использования библиотек и фреймворков.
@@ -117,7 +120,7 @@ addInfo = (emptyClone, currentIndex) => {
     emptyClone.querySelector(`.wrapper__popup-title`).textContent = dataPopup[currentIndex].popupTitle;
     emptyClone.querySelector(`.wrapper__popup-img`).setAttribute(`src`, dataPopup[currentIndex].img);
     emptyClone.querySelector(`.wrapper__popup-title-describe`).textContent = dataPopup[currentIndex].popupTitle;
-    emptyClone.querySelector(`.wrapper__popup-text`).textContent = dataPopup[currentIndex].describePopup;
+    emptyClone.querySelector(`.wrapper__popup-text`).innerText = dataPopup[currentIndex].describePopup;
     return emptyClone;
 };
 for(let i = 0; i < imgMain.length; i++) {
